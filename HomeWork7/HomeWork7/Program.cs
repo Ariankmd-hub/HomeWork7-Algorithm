@@ -11,7 +11,7 @@ using HomeWork7.Task9;
 
 while (true) 
 {
-    Console.WriteLine("Choose a task between [1-10], [0] to exit:");
+    Console.WriteLine("Choose a task between [1-10], [0] to exit:  ");
 
     bool choiceValidation = int.TryParse(Console.ReadLine(), out int choice);
     if (!choiceValidation)
@@ -22,7 +22,8 @@ while (true)
     {
         int number = ConsoleHelper.ReadInt("Please enter a number for the digit counter:");
         DigitCounter digitCounter = new DigitCounter();
-        Console.WriteLine($"The number of digits is: {digitCounter.Counter(number)}");  
+        Console.WriteLine($"The number of digits is: {digitCounter.Counter(number)}");
+        Console.WriteLine("___________________________________________________________________");
     }
     
     else if (choice == 2)
@@ -38,6 +39,7 @@ while (true)
         {
             Console.WriteLine($"{number} is not a prime number!");
         }
+        Console.WriteLine("___________________________________________________________________");
     }
     else if(choice == 3) 
     {
@@ -45,6 +47,7 @@ while (true)
         SumCalculator sumCalculator = new SumCalculator();
         int sum = sumCalculator.SumDigit(number);
         Console.WriteLine($"The sum of digits is: {sum}");
+        Console.WriteLine("___________________________________________________________________");
 
     }
     else if (choice == 4) 
@@ -59,6 +62,7 @@ while (true)
         {
             Console.WriteLine("This number is not a palindrome.");
         }
+        Console.WriteLine("___________________________________________________________________");
     }
     else if (choice == 5) 
     {
@@ -67,6 +71,7 @@ while (true)
         Gcd gcd = new Gcd();
         int result = gcd.Calculate(number1, number2);
         Console.WriteLine($"The GCD for these two numbers is: {result}");
+        Console.WriteLine("___________________________________________________________________");
     }
     else if(choice == 6) 
     {
@@ -74,6 +79,7 @@ while (true)
         ReverseNumber reverseNumber = new ReverseNumber();
         int result = reverseNumber.Reverse(number);
         Console.WriteLine($"The reversed number is: {result}");
+        Console.WriteLine("___________________________________________________________________");
 
 
     }
@@ -83,6 +89,7 @@ while (true)
         DecimalToBinary decimalToBinary = new DecimalToBinary();
         string result = decimalToBinary.ConvertToBinary(number);
         Console.WriteLine($"The binary representation is: {result}");
+        Console.WriteLine("___________________________________________________________________");
     }
     else if( choice == 8) 
     {
@@ -90,6 +97,7 @@ while (true)
         Permutation permutation = new Permutation();
         List<string> result = permutation.GeneratePermutations(str);
         Console.WriteLine($"Permutations: {string.Join(", ", result)}");
+        Console.WriteLine("___________________________________________________________________");
 
     }
     else if (choice == 9) 
@@ -104,11 +112,13 @@ while (true)
         {
             Console.WriteLine("It does not have any duplicates.");
         }
+        Console.WriteLine("___________________________________________________________________");
 
     }
     else if (choice == 10)
     {
         Console.WriteLine("I would rate my algorithm skills a 4 out of 5.");
+        Console.WriteLine("___________________________________________________________________");
     }
     else if (choice == 0)
     {
